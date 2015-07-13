@@ -57,7 +57,22 @@ def login():
     form = LoginForm(request.form)
     return render_template('forms/login.html', form=form)
 
+@app.route('/python')
+def python():
+    return render_template('pages/placeholder.python.html')
 
+@app.route('/lask')
+def flask():
+    return render_template('pages/placeholder.flask.html')
+
+'''@app.route('/jinjaa')
+def jinjaa():
+    return render_template('pages/placeholder.jinja.html')
+
+@app.route('/tutorials')
+def tutorials():
+    return render_template('pages/placeholder.tutorials.html')
+'''
 @app.route('/register')
 def register():
     form = RegisterForm(request.form)
